@@ -1,0 +1,24 @@
+{
+  "twitterAccount": "ronoctua",
+  "images": {
+    "animationFilename": "animation",
+    "welcomeFilename": "01-welcome",
+    "quoteFilename": "02-quote",
+    "languagesFilename": "03-languages",
+    "twitterFilename": "04-twitter",
+    "welcomeContent": "WELCOME!",
+    "welcomeHeight": "50",
+    "welcomeFontSize": "30",
+    "extension": "png",
+    "animationExtension": "gif",
+    "width": "315",
+    "height": "140",
+    "gifExtent": "345x165",
+    "gifDelay": "420",
+    "fontFamily": "sans-serif",
+    "primaryColor": "#fddf68",
+    "textColor": "#ffffff",
+    "secondaryTextColor": "#a0a0a0",
+    "backgroundColor": "#333333"
+  }
+}

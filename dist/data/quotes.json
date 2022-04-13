@@ -1,0 +1,20 @@
+{
+    "quotes": [
+        ["Austin Freeman", "Simplicity is the soul of efficiency."],
+        ["Bill Curtis", "In a room full of top software designers, if two agree on the same thing, that’s a majority."],
+        ["Bill Gates", "Measuring programming progress by lines of code is like measuring aircraft building progress by weight."],
+        ["Bill Gates", "Your most unhappy customers are your greatest source of learning."],
+        ["Christian Heilmann", "Java is to JavaScript what Car is to Carpet."],
+        ["Claude Chabrol", "You have to accept the fact that sometimes you are the pigeon, and sometimes you are the statue."],
+        ["David H. Hansson", "The best way to predict the future is to implement it."],
+        ["Jamie Zawinski", "Some people, when confronted with a problem, think ‘I know, I’ll use regular expressions.’; Now they have two problems."],
+        ["Jeremy Hammond", "Your mind is programmable - if you're not programming your mind, else will program it for you."],
+        ["John Johnson", "First, solve the problem. Then, write the code."],
+        ["Martin Golding", "Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live."],
+        ["Paul Cookson", "Great web design without functionality is like a sports car with no engine."],
+        ["Steven R. Garman", "Physics is the universe’s operating system."],
+        ["Will Ferrell", "Before you marry a person, you should first make them use a computer with slow Internet to see who they really are."],
+        ["Will Rogers", "When I die, I want to die like my grandfather who died peacefully in his sleep. Not screaming like all the passengers in his car."],
+        ["Zombie", "I love you for who you are on the inside."]
+    ]
+}
