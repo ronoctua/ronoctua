@@ -64,7 +64,7 @@ var languages = function () { return __awaiter(void 0, void 0, void 0, function 
                     languagesData.push(formattedLanguage);
                 }
                 if (languagesData.length === 0) {
-                    return [2 /*return*/, null]; // Returning null to keep old metrics.
+                    return [2 /*return*/, null]; // Returning null will keep old metrics.
                 }
                 return [2 /*return*/, "\n<span color=\"" + primaryColor + "\"><b>Most used languages</b> <small>(last days)</small></span>\n\n<span rise=\"-10000\">" + languagesData.join('') + "</span>\n  "];
         }
