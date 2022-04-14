@@ -34,7 +34,7 @@ jobs:
           git config --local user.name "GitHub Action"
 
       - name: Git reset
-        run: git reset --hard origin/master
+        run: git reset --hard origin/main
 
       - name: Run script to update the content
         run: yarn build && yarn start
