@@ -16,9 +16,9 @@
         "gifExtent": "345x165",
         "gifDelay": "420",
         "fontFamily": "sans-serif",
-        "primaryColor": "#fddf68",
-        "textColor": "#ffffff",
+        "primaryColor": "#58a6ff",
+        "textColor": "#c9d1d9",
         "secondaryTextColor": "#a0a0a0",
-        "backgroundColor": "#333333"
+        "backgroundColor": "#2d333b"
     }
 }
