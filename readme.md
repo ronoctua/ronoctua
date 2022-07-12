@@ -25,3 +25,6 @@
     </blockquote>
   </sup>
 </div>
+
+<!-- This is not a real image. -->
+<img alt="" src="https://link.martins.page/ro-github">
