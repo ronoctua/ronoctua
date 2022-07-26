@@ -16,6 +16,10 @@ export const languages = async () => {
 
   const languagesData = [];
 
+  if (!response.data.languages) {
+    return null;
+  }
+
   for (let i = 0; i < Math.min(response.data.languages.length, 5); i++) {
     const responseLanguageData = response.data.languages[i];
     const { name, percent } = responseLanguageData;

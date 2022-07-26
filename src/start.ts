@@ -1,3 +1,5 @@
+import { exit } from 'process';
+
 import { twitterAccount, images as imagesConfig } from '@config/config.json';
 
 import { createAnimation, createImage } from './createImage';
@@ -18,6 +20,12 @@ const {
   welcomeHeight,
   welcomeFontSize,
 } = imagesConfig;
+
+if (!languagesData) {
+  // throw new Error('>>> No programming language data');
+  console.log('>>> No programming language data');
+  exit();
+}
 
 try {
   createImage({
