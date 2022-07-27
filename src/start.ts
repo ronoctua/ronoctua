@@ -1,5 +1,3 @@
-import { exit } from 'process';
-
 import { twitterAccount, images as imagesConfig } from '@config/config.json';
 
 import { createAnimation, createImage } from './createImage';
@@ -8,8 +6,6 @@ import { languages } from './languages';
 import { randomQuote } from './quote';
 import { createTwitterImage } from './twitter';
 
-const quoteContent = randomQuote({});
-const languagesData = languages();
 const {
   welcomeFilename,
   quoteFilename,
@@ -21,30 +17,42 @@ const {
   welcomeFontSize,
 } = imagesConfig;
 
-if (!languagesData) {
-  // throw new Error('>>> No programming language data');
-  console.log('>>> No programming language data');
-  exit();
-}
+let quoteContent: string;
+let languagesData: string | null | undefined;
 
-try {
-  createImage({
-    filename: welcomeFilename,
-    content: welcomeContent,
-    height: welcomeHeight,
-    fontSize: welcomeFontSize,
-    alignContent: 'center',
-  });
-  createImage({ filename: quoteFilename, content: quoteContent });
-  createImage({ filename: languagesFilename, content: languagesData });
-  createTwitterImage({
-    filename: twitterFilename,
-    accountName: twitterAccount,
-  });
+const getImageContent = async () => {
+  quoteContent = randomQuote({});
+  languagesData = await languages();
+};
 
-  setTimeout(async () => {
-    createAnimation({ filename: animationFilename });
-  }, 7000);
-} catch (error: any) {
-  handleError(error.message);
-}
+const createImages = () => {
+  if (!languagesData) {
+    return;
+  }
+
+  try {
+    createImage({
+      filename: welcomeFilename,
+      content: welcomeContent,
+      height: welcomeHeight,
+      fontSize: welcomeFontSize,
+      alignContent: 'center',
+    });
+    createImage({ filename: quoteFilename, content: quoteContent });
+    createImage({ filename: languagesFilename, content: languagesData });
+    createTwitterImage({
+      filename: twitterFilename,
+      accountName: twitterAccount,
+    });
+
+    setTimeout(async () => {
+      createAnimation({ filename: animationFilename });
+    }, 7000);
+  } catch (error: any) {
+    handleError(error.message);
+  }
+};
+
+getImageContent().then(() => {
+  createImages();
+});
