@@ -26,10 +26,6 @@ const getImageContent = async () => {
 };
 
 const createImages = () => {
-  if (!languagesData) {
-    return;
-  }
-
   try {
     createImage({
       filename: welcomeFilename,
@@ -38,8 +34,13 @@ const createImages = () => {
       fontSize: welcomeFontSize,
       alignContent: 'center',
     });
+
     createImage({ filename: quoteFilename, content: quoteContent });
-    createImage({ filename: languagesFilename, content: languagesData });
+
+    if (languagesData) {
+      createImage({ filename: languagesFilename, content: languagesData });
+    }
+
     createTwitterImage({
       filename: twitterFilename,
       accountName: twitterAccount,
